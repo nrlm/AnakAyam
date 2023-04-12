@@ -19,6 +19,7 @@ import pickle
 
 #Baca Data
 data = pd.read_excel("./data_modeling1.xlsx")
+loaded_model = pickle.load(open('./model.pkl', 'rb'))
 
 LOGO_IMAGE = "./logo.jpg"
 #Disable Warning
