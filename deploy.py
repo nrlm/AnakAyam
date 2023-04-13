@@ -3,9 +3,9 @@ import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import base64
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.linear_model import HuberRegressor, LinearRegression, PassiveAggressiveRegressor, ElasticNet, Ridge, BayesianRidge
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor,ExtraTreesRegressor
 from sklearn.model_selection import validation_curve, LeaveOneOut, train_test_split, cross_val_score
 from sklearn.model_selection import cross_validate, KFold, cross_val_score, RandomizedSearchCV, GridSearchCV
@@ -21,7 +21,7 @@ import pickle
 data = pd.read_excel("./data_modeling1.xlsx")
 loaded_model = pickle.load(open('./model.pkl', 'rb'))
 
-LOGO_IMAGE = "./logo.jpg"
+LOGO_IMAGE = "./logo.jpeg"
 #Disable Warning
 st.set_option('deprecation.showPyplotGlobalUse', False)
 #Set Size
@@ -43,7 +43,7 @@ st.markdown("<h1 style='text-align: center; color: #243A74; font-family:sans-ser
 menu = st.sidebar.selectbox("Select Menu", ("Dashboard", "Prediksi"))
 if menu == "Dashboard":
     st.write("Menu Dashboard")
-    components.iframe("https://lookerstudio.google.com/s/t6x84k0EHls", width=1200, height=1200)
+    components.iframe("https://lookerstudio.google.com/s/jw757n_9a_U", width=1200, height=1200)
 if menu == "Prediksi":
     st.write("Menu Prediksi")
     st.write(data.head())
